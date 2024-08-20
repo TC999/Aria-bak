@@ -4,7 +4,11 @@
 ## [中文文档](https://aria.laoyuyu.me/aria_doc)
 > [!caution]
 >
-> 原作者已删库，这是备份仓库
+> [原仓库](https://github.com/AriaLyy/Aria)已删库，这是备份仓库
+>
+> 作者原话：因Aria被诈骗份子使用，导致我被跨省，因此本项目源码永久删除。最后说一句，诈骗份子死全家，奉劝给诈骗份子写代码的逼人和狗，别他妈用开源代码，害了广大开源作者。
+
+中文文档：https://qaz64.github.io/aria_doc/api/task_handle.html
 
 Aria项目源于工作中遇到的一个文件下载管理的需求，当时被下载折磨的痛不欲生，从那时起便萌生了编写一个简单易用，稳当高效的下载框架，aria经历了1.0到3.0的开发，算是越来越接近当初所制定的目标了。
 
@@ -48,12 +52,12 @@ Aria有以下特点：
 ![m3u8点播文件边下边看](img/m3u8VodDownload.gif)
 
 ## 引入库
-[![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/AriaLyy/Aria/blob/master/LICENSE)
-[![Core](https://img.shields.io/badge/Core-3.8.16-blue)](https://github.com/AriaLyy/Aria)
-[![Compiler](https://img.shields.io/badge/Compiler-3.8.16-blue)](https://github.com/AriaLyy/Aria)
-[![FtpComponent](https://img.shields.io/badge/FtpComponent-3.8.16-orange)](https://github.com/AriaLyy/Aria)
-[![FtpComponent](https://img.shields.io/badge/SFtpComponent-3.8.16-orange)](https://github.com/AriaLyy/Aria)
-[![M3U8Component](https://img.shields.io/badge/M3U8Component-3.8.16-orange)](https://github.com/AriaLyy/Aria)
+[![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/TC999/Aria-bak/blob/master/LICENSE)
+[![Core](https://img.shields.io/badge/Core-3.8.16-blue)](https://github.com/TC999/Aria-bak)
+[![Compiler](https://img.shields.io/badge/Compiler-3.8.16-blue)](https://github.com/TC999/Aria-bak)
+[![FtpComponent](https://img.shields.io/badge/FtpComponent-3.8.16-orange)](https://github.com/TC999/Aria-bak)
+[![FtpComponent](https://img.shields.io/badge/SFtpComponent-3.8.16-orange)](https://github.com/TC999/Aria-bak)
+[![M3U8Component](https://img.shields.io/badge/M3U8Component-3.8.16-orange)](https://github.com/TC999/Aria-bak)
 
 
 ```java
