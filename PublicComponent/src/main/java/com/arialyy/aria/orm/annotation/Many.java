@@ -1,0 +1,44 @@
+/*
+ * Copyright (C) 2016 AriaLyy(https://github.com/AriaLyy/Aria)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.arialyy.aria.orm.annotation;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/**
+ * Created by AriaL on 2017/7/4.
+ * 一对多
+ */
+@Target(ElementType.FIELD) @Retention(RetentionPolicy.RUNTIME) public @interface Many {
+  /**
+   * 父表对应的字段名
+   */
+  String parentColumn();
+
+  /**
+   * 父表在子表对应的字段
+   */
+  String entityColumn();
+
+  ///**
+  // * 是否是一对一关系
+  // *
+  // * @return {@code true} 是，{@code false} 不是
+  // */
+  //boolean isOne2One() default false;
+}

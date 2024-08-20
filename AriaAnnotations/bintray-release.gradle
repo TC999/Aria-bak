@@ -1,0 +1,13 @@
+apply plugin: 'com.novoda.bintray-release'
+publish {
+//  artifactId = 'aria-annotations'
+//  uploadName = 'AriaAnnotations'
+  artifactId = 'annotations'
+  uploadName = 'Annotations'
+  userOrg = rootProject.ext.userOrg
+  groupId = rootProject.ext.groupId
+  publishVersion = rootProject.ext.publishVersion
+  desc = rootProject.ext.desc
+  website = rootProject.ext.website
+  licences = rootProject.ext.licences
+}

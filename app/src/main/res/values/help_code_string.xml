@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string name="code_ftp_upload">
+    Aria.upload(this)
+      .loadFtp("/mnt/sdcard/gggg.apk") //上传文件路径
+      .setUploadUrl(URL)        //上传的ftp服务器地址
+      .login("lao", "123456")
+      .start();
+  </string>
+
+</resources>

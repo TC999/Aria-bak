@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <include layout="@layout/layout_bar" />
+
+    <com.arialyy.simple.widget.ProgressLayout
+        android:id="@+id/pl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="16dp"
+        />
+
+    <com.arialyy.simple.widget.SubStateLinearLayout
+        android:id="@+id/child_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pl"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        />
+  </RelativeLayout>
+
+
+</layout>

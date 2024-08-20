@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:background="@color/white"
+      >
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/surface_view"
+        android:background="#33000000"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        >
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/control_bt"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:clickable="true"
+          android:visibility="visible"
+          app:srcCompat="@drawable/selector_start_stop_bt"
+          />
+
+      <SeekBar
+          android:id="@+id/seek_bar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/control_bt"
+          />
+    </RelativeLayout>
+
+  </RelativeLayout>
+</layout>

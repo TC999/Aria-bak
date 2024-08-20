@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <include
+      layout="@layout/layout_item_progress"
+      android:id="@+id/include"
+      />
+
+
+  <com.arialyy.simple.widget.SubStateLinearLayout
+      android:visibility="gone"
+      android:id="@+id/child_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/include"
+      android:orientation="vertical"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      />
+
+
+</RelativeLayout>

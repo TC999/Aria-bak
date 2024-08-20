@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="HorizontalProgressBarWithNumber">
+    <attr format="color" name="progress_unreached_color"/>
+    <attr format="color" name="progress_reached_color"/>
+    <attr format="dimension" name="progress_reached_bar_height"/>
+    <attr format="dimension" name="progress_unreached_bar_height"/>
+    <attr format="dimension" name="progress_text_size"/>
+    <attr format="color" name="progress_text_color"/>
+    <attr format="dimension" name="progress_text_offset"/>
+    <attr format="enum" name="progress_text_visibility">
+      <enum name="visible" value="0"/>
+      <enum name="invisible" value="1"/>
+    </attr>
+  </declare-styleable>
+
+  <declare-styleable name="SvgTextView">
+    <attr format="reference" name="svg_text_view_icon"/>
+    <attr format="reference" name="text"/>
+  </declare-styleable>
+</resources>

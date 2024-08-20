@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:id="@+id/name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="name"
+      />
+
+  <TextView
+      android:id="@+id/download_url"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/name"
+      android:layout_marginTop="10dp"
+      />
+
+  <TextView
+      android:id="@+id/download_path"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/download_url"
+      android:layout_marginTop="10dp"
+      />
+
+  <Button
+      android:id="@+id/bt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/download_path"
+      android:text="点击下载"
+      />
+
+</RelativeLayout>

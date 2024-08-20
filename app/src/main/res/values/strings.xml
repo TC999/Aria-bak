@@ -1,0 +1,173 @@
+<resources>
+  <string name="app_name">Aria</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="url"><![CDATA[<b><font color=#2B2B2B>URL:</b>]]> %1$s</string>
+  <string name="file_name"><![CDATA[<b><font color=#2B2B2B>NAME:</b>]]> %1$s</string>
+  <string name="file_path"><![CDATA[<b><font color=#2B2B2B>PATH:</b>]]> %1$s</string>
+  <string name="enter">确认</string>
+  <string name="cancel">取消</string>
+  <string name="modify_url_dialog_title">修改URL</string>
+  <string name="stop">停止</string>
+  <string name="stopped">已停止</string>
+  <string name="start">开始</string>
+  <string name="waiting">等待中</string>
+  <string name="state_error">任务已失败</string>
+  <string name="resume">恢复</string>
+  <string name="delete">删除</string>
+  <string name="complete">完成</string>
+  <string name="completed">已完成</string>
+  <string name="code_simple">代码示例：</string>
+  <string name="download_success">下载完成</string>
+  <string name="upload_success">上传完成</string>
+  <string name="download_fail">下载失败</string>
+  <string name="upload_fail">上传失败</string>
+  <string name="re_start">重新开始</string>
+  <string name="choose_current_dir">选择当前文件夹</string>
+  <string name="choose_dir">选择文件夹</string>
+  <string name="current_path"><![CDATA[<b><font color=#2B2B2B>PATH:</b>]]> %1$s</string>
+  <string name="dir_path"><![CDATA[<b><font color=#2B2B2B>DIR:</b>]]> %1$s</string>
+  <string name="file_name_hint">文件名</string>
+  <string name="url_hint">url</string>
+  <string name="name">NAME: </string>
+  <string name="modify_file_path">修改文件路径</string>
+  <string name="m3u8_file">M3U8点播文件下载</string>
+  <string name="m3u8_live">M3U8直播文件下载</string>
+
+
+  <string name="error_file_name_null">文件名为空</string>
+
+  <string-array name="main_items">
+    <item>HTTP 下载</item>
+    <item>HTTP 上传</item>
+    <item>HTTP 组合任务下载</item>
+    <item>FTP 下载</item>
+    <item>FTP 文件夹下载</item>
+    <item>FTP 文件上传</item>
+    <item>M3U8 点播文件下载</item>
+    <item>M3U8 直播文件下载</item>
+    <item>SFTP 下载</item>
+    <item>SFTP 上传</item>
+  </string-array>
+
+  <string-array name="main_items_desc">
+    <item>单文件下载、多文件队列下载、各组件中使用</item>
+    <item>上传单个文件到服务器</item>
+    <item>多文件组合为一个组（如：封面、字幕、电影）</item>
+    <item>单文件下载、多文件队列下载</item>
+    <item>下载服务器上的某个FTP文件夹</item>
+    <item>上传单个文件到服务器</item>
+    <item>下载M3U8点播文件</item>
+    <item>下载M3U8直播文件</item>
+    <item>SFTP单文件下载</item>
+    <item>SFTP单文件上传</item>
+  </string-array>
+
+  <string-array name="download_items">
+    <item>单任务下载</item>
+    <item>多任务下载</item>
+    <item>高优先级任务</item>
+    <item>kotlin</item>
+    <item>多fragment</item>
+    <item>组件中使用</item>
+  </string-array>
+
+  <string-array name="component_items">
+    <item>fragment中使用</item>
+    <item>dialog中使用</item>
+    <item>dialogFragment中使用</item>
+  </string-array>
+
+
+  <string-array name="test_apk_download_url">
+    <item>http://static.gaoshouyou.com/d/d4/4f/d6d48db3794fb9ecf47e83c346570881.apk</item>
+  </string-array>
+
+  <string-array name="file_nams">
+    <item>王者荣耀</item>
+    <item>植物大战僵尸</item>
+    <item>部落冲突</item>
+    <item>瘟疫公司</item>
+    <item>水上公园大战</item>
+    <item>死亡之雨</item>
+
+    <item>test_1</item>
+    <item>test_2</item>
+    <item>test_3</item>
+
+  </string-array>
+  <string-array name="download_url">
+    <item>https://downs.muzhiwan.com/2019/06/28/com.tencent.tmgp.sgame5d15f9df3bb4d.gpk</item>
+    <item>https://downs.muzhiwan.com/2017/03/15/com.ea.game.pvz2_row58c8bfc00eea8.gpk</item>
+    <item>https://downs.muzhiwan.com/2019/07/04/com.supercell.clashofclans.ewan.mzw_5d1da09397884.apk</item>
+    <item>https://downs.muzhiwan.com/2019/02/28/com.miniclip.plagueinc_5c77596c79179.apk</item>
+    <item>https://downs.muzhiwan.com/2019/06/03/com.aqua.slide_5cf4b69e90e6a.apk</item>
+    <item>https://downs.muzhiwan.com/2019/05/07/com.tinydevbox.deadrain2_g_5cd14a8aedb2f.apk</item>
+    <item>http://dby-resource-android.duobeiyun.com/jz22a8508b4265466b9fb4bb29082eaa2d.zip</item>
+    <item>http://dby-resource-android.duobeiyun.com/jz05fa8faf068145fcb25c93c8091297ad.zip</item>
+    <item>http://dby-resource-android.duobeiyun.com/jz684e1b4c2f6b4576979e60fd95edebad.zip</item>
+
+  </string-array>
+
+  <string-array name="highest_names">
+    <item>豪门足球风云</item>
+    <item>碧蓝航线</item>
+    <item>天龙八部手游</item>
+  </string-array>
+
+  <string-array name="highest_urls">
+    <item>https://res5.d.cn/6f78ee3bcfdd033e0193c05c74acd280a32d5c1d8da7a68963da81a1403751e88e8f115ea475566c54456b74d82098c836577f54711a35bbb149e0bd88dc15c48845327fae8652cc.apk</item>
+    <item>https://res5.d.cn/6f78ee3bcfdd033e1861859eaef45235b089f60f2e08c0e0e4fc8959d94de1e358a5149b4bec8519eabc62a53eebea280a05ef2d902d3153ae1dec4cb07b505e90a9f50af7dd14c4.apk</item>
+    <item>https://res5.d.cn/6f78ee3bcfdd033ef8e38596afb298d87de07e5f0f1f91f22acd57750f8ae68270531e2b266ea41c86cd196da839a0afef1952dde89773c7e26b9019249503174ca0513fa0a36a6472c4202bbf94da382964a0478471b753ebd95b67aac7ad89.apk</item>
+  </string-array>
+
+  <string-array name="group_urls">
+    <item>https://downs.muzhiwan.com/2019/06/19/com.and.games505.TerrariaPaid5d0a074e451c0.gpk</item>
+    <item>https://downs.muzhiwan.com/2017/03/28/com.xyzstudio_58da07426e959.apk</item>
+  </string-array>
+
+  <string-array name="group_urls_1">
+    <item>http://hzdown.muzhiwan.com/2017/05/08/nl.noio.kingdom_59104935e56f0.apk</item>
+    <!--<item>https://atom-installer.github.com/v1.13.0/AtomSetup.exe1</item>-->
+    <item>http://hzdown.muzhiwan.com/2017/09/05/com.mir.iphone.empire83jie.mzw_59ae6d5a3638d.apk</item>
+  </string-array>
+
+  <string-array name="group_urls_2">
+    <item>http://down.muzhiwan.com/2017/04/05/org.sanguoqy01_58e4993914424.apk</item>
+    <item>http://apk500.bce.baidu-mgame.com/game/67000/67734/20170622040827_oem_5502845.apk?r=1</item>
+  </string-array>
+
+  <string-array name="group_urls_3">
+    <item>http://down.muzhiwan.com/2017/04/05/org.sanguoqy01_58e4993914424.apk</item>
+    <item>http://apk500.bce.baidu-mgame.com/game/67000/67734/20170622040827_oem_5502845.apk?r=1</item>
+<!--    <item>https://downs.muzhiwan.com/2019/07/23/com.amazid.me_5d36bade614d9.apk</item>-->
+<!--    <item>https://downs.muzhiwan.com/2019/07/30/com.counter.terrorist.attack.fps.sniper.fight_5d3fe8f0a7edf.apk</item>-->
+  </string-array>
+
+  <string-array name="group_url4">
+    <item>http://120.79.135.3/img/20180601/VR Karts Sprint.ver.1.04.build.15_crack_align.apk</item>
+    <item>http://120.79.135.3/img/20180601/main.11.com.daydvr.acefishing.vr.freefull.google.global.android.common.obb</item>
+  </string-array>
+
+  <string-array name="group_names">
+    <item>泰拉瑞亚.apk</item>
+    <item>疯狂屁股.apk</item>
+    <!--<item>天魔幻想.apk</item>-->
+  </string-array>
+
+  <string-array name="group_names_1">
+    <item>新大陆.apk</item>
+    <item>罗马战争.apk</item>
+  </string-array>
+
+  <string-array name="group_names_2">
+    <item>三国群英传.apk</item>
+    <item>海岛骑兵.apk</item>
+  </string-array>
+
+  <string-array name="group_names_3">
+    <item>神奇的绳索英雄.apk</item>
+    <item>自由火力反击.apk</item>
+  </string-array>
+
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+  <data>
+    <variable
+        name="title"
+        type="String"
+        />
+    <variable
+        name="name"
+        type="String"
+        />
+    <variable
+        name="dir"
+        type="String"
+        />
+    <variable
+        name="viewModel"
+        type="com.arialyy.simple.common.ModifyPathDialog"
+        />
+  </data>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:gravity="center|left"
+        android:maxHeight="400dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:text="@{title}"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        />
+
+    <com.arialyy.simple.widget.SvgTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        bind:iconClickListener="@{() -> viewModel.chooseDir()}"
+        bind:svg_text_view_icon="@drawable/ic_modify"
+        bind:text="@{@string/dir_path(dir)}"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        >
+
+      <TextView
+          android:id="@+id/dir_hint"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:text="@string/name"
+          android:textColor="@color/text_black"
+          android:textSize="@dimen/text_size_normal"
+          android:textStyle="bold"
+          />
+
+      <EditText
+          android:id="@+id/edit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginBottom="15dp"
+          android:layout_marginLeft="8dp"
+          android:layout_toRightOf="@+id/dir_hint"
+          android:background="@android:color/transparent"
+          android:hint="@string/file_name_hint"
+          android:lineSpacingMultiplier="1.2"
+          android:text="@={name}"
+          android:textColor="@color/text_black"
+          android:textSize="@dimen/text_size_normal"
+          />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+      <Button
+          android:id="@+id/cancel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/cancel"
+          style="?buttonBarButtonStyle"
+          />
+
+      <Button
+          android:id="@+id/enter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/enter"
+          style="?buttonBarButtonStyle"
+          />
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+</layout>

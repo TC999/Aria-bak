@@ -1,0 +1,4 @@
+/build
+mvvm2.iml
+#jcenter.gradle
+gradle.properties

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+  <TextView
+      android:id="@+id/text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toLeftOf="@+id/image"
+      android:ellipsize="end"
+      android:singleLine="true"
+      android:textSize="@dimen/text_size_normal"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/image"
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="8dp"
+      android:clickable="true"
+      />
+
+</RelativeLayout>

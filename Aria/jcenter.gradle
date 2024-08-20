@@ -1,0 +1,143 @@
+group = PROJ_GROUP_ID
+version = PROJ_VERSION
+project.archivesBaseName = PROJ_ARTIFACT_ID
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+//输入：gradlew bintray 执行
+
+//############################## jar、sources、doc 打包 create #######################################
+task sourcesJar(type: Jar) {
+  from android.sourceSets.main.java.srcDirs
+  classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+  source = android.sourceSets.main.java.srcDirs
+  classpath += configurations.compile
+  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  classifier = 'javadoc'
+  from javadoc.destinationDir
+}
+
+javadoc {
+  options {
+    encoding "UTF-8"
+    charSet 'UTF-8'
+    author true
+    version true
+    links "http://docs.oracle.com/javase/7/docs/api"
+    title PROJ_ARTIFACT_ID
+  }
+}
+
+//添加以下信息避免JAVADOC打包时引用其它类库而出现问题，比如出现以下错误
+// xxxx.java:20: 错误: 找不到符号
+// public static <T> T create(JsonElement json, Class<T> classOfModel) {
+//    ^
+//    符号:   类 JsonElement
+//    位置: 类 xxxx
+android.libraryVariants.all { variant ->
+  println variant.javaCompile.classpath.files
+  if (variant.name == 'release') {
+    //我们只需 release 的 javadoc
+    task("generate${variant.name.capitalize()}Javadoc", type: Javadoc) {
+      // title = ''
+      // description = ''
+      source = variant.javaCompile.source
+      classpath = files(variant.javaCompile.classpath.files, project.android.getBootClasspath())
+      options {
+        encoding "utf-8"
+        links "http://docs.oracle.com/javase/7/docs/api/"
+        linksOffline "http://d.android.com/reference", "${android.sdkDirectory}/docs/reference"
+      }
+      exclude '**/BuildConfig.java'
+      exclude '**/R.java'
+    }
+    task("javadoc${variant.name.capitalize()}Jar", type: Jar,
+        dependsOn: "generate${variant.name.capitalize()}Javadoc") {
+      classifier = 'javadoc'
+      from tasks.getByName("generate${variant.name.capitalize()}Javadoc").destinationDir
+    }
+    artifacts {
+      archives tasks.getByName("javadoc${variant.name.capitalize()}Jar")
+    }
+  }
+}
+
+artifacts {
+  archives javadocJar
+  archives sourcesJar
+}
+//############################## jar、sources、doc 打包 end #######################################
+
+//################################# jcenter 上传配置 create #########################################
+bintray {
+//  user = hasProperty("bintrayUser") ? getProperty("bintrayUser") : getProperty("BINTRAY_USER")
+//  groupHash = hasProperty("bintrayKey") ? getProperty("bintrayKey") : getProperty("BINTRAY_KEY")
+  user = BINTRAY_USER
+  key = BINTRAY_KEY
+  configurations = ['archives']
+
+  pkg {
+    repo = PROJ_REPO
+    name = PROJ_NAME
+    desc = PROJ_DESCRIPTION
+    websiteUrl = PROJ_WEB_SITE_URL
+    issueTrackerUrl = PROJ_ISSUE_TRACKER_URL
+    vcsUrl = PROJ_VCS_URL
+    publish = true
+    publicDownloadNumbers = true
+    licenses = LICENSES
+//    version {
+//      desc = libraryDescription
+//      gpg {
+//        sign = true //Determines whether to GPG sign the files. The default is false
+//        passphrase = properties.getProperty("bintray.gpg.password")
+//        //Optional. The passphrase for GPG signing'
+//      }
+//    }
+  }
+}
+
+//install
+install {
+  repositories.mavenInstaller {
+    // This generates POM.xml with proper parameters
+    pom {
+      project {
+        packaging 'aar'
+        groupId PROJ_GROUP_ID
+        artifactId PROJ_ARTIFACT_ID
+
+        // Add your description here
+        name PROJ_NAME
+        description PROJ_DESCRIPTION
+        url PROJ_WEB_SITE_URL
+
+        // Set your license
+        licenses {
+          license {
+            name LICENSE_NAME
+            url LICENSE_URL
+          }
+        }
+        developers {
+          developer {
+            id DEVELOPER_ID
+            name DEVELOPER_NAME
+            email DEVELOPER_EMAIL
+          }
+        }
+        scm {
+          connection PROJ_WEB_SITE_URL
+          developerConnection PROJ_WEB_SITE_URL
+          url PROJ_VCS_URL
+        }
+      }
+    }
+  }
+}
+//################################# jcenter 上传配置 end #########################################

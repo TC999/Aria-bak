@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <LinearLayout
+      android:minWidth="300dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="设置下载数"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start"
+          android:layoutDirection="rtl"
+          android:tag="2"
+          android:text="下载线程数：2"
+          android:textAlignment="textStart"
+          />
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start"
+          android:layoutDirection="rtl"
+          android:tag="3"
+          android:text="下载线程数：3"
+          android:textAlignment="textStart"
+          />
+
+      <RadioButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start"
+          android:layoutDirection="rtl"
+          android:tag="4"
+          android:text="下载线程数：4"
+          android:textAlignment="textStart"
+          />
+
+    </RadioGroup>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        />
+
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        style="?buttonBarButtonStyle"
+        />
+
+  </LinearLayout>
+
+</layout>

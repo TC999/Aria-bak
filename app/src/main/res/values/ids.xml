@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="item_click_support" type="id"/>
+
+  <array name="main_icons">
+    <item>@drawable/ic_http</item>
+    <item>@drawable/ic_http</item>
+    <item>@drawable/ic_http</item>
+    <item>@drawable/ic_ftp</item>
+    <item>@drawable/ic_ftp_dir</item>
+    <item>@drawable/ic_ftp</item>
+  </array>
+</resources>
